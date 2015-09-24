@@ -13,7 +13,6 @@
 		CEAACFFA1BAB3E5900FC090B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAACFF81BAB3E5900FC090B /* Main.storyboard */; };
 		CEAACFFC1BAB3E5900FC090B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAACFFB1BAB3E5900FC090B /* Images.xcassets */; };
 		CEAACFFF1BAB3E5900FC090B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAACFFD1BAB3E5900FC090B /* LaunchScreen.xib */; };
-		CEAAD04A1BAB40B900FC090B /* NSObject+FFLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAAD0221BAB40B900FC090B /* NSObject+FFLocalStorage.m */; };
 		CEAAD04B1BAB40B900FC090B /* NSString+device.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAAD0241BAB40B900FC090B /* NSString+device.m */; };
 		CEAAD04C1BAB40B900FC090B /* UIColor+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAAD0261BAB40B900FC090B /* UIColor+FF.m */; };
 		CEAAD04D1BAB40B900FC090B /* UIFont+FF.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAAD0281BAB40B900FC090B /* UIFont+FF.m */; };
@@ -36,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE721BF31BB473A100B0460F /* MyCab-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyCab-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		CEAACFEB1BAB3E5900FC090B /* MyCab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAACFEF1BAB3E5900FC090B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEAACFF01BAB3E5900FC090B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,8 +49,6 @@
 		CEAAD0151BAB3F5600FC090B /* FFConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFConfiguration.h; sourceTree = "<group>"; };
 		CEAAD0161BAB3F5600FC090B /* FFConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFConstant.h; sourceTree = "<group>"; };
 		CEAAD0181BAB3F5600FC090B /* FFurls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFurls.h; sourceTree = "<group>"; };
-		CEAAD0211BAB40B900FC090B /* NSObject+FFLocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FFLocalStorage.h"; sourceTree = "<group>"; };
-		CEAAD0221BAB40B900FC090B /* NSObject+FFLocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FFLocalStorage.m"; sourceTree = "<group>"; };
 		CEAAD0231BAB40B900FC090B /* NSString+device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+device.h"; sourceTree = "<group>"; };
 		CEAAD0241BAB40B900FC090B /* NSString+device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+device.m"; sourceTree = "<group>"; };
 		CEAAD0251BAB40B900FC090B /* UIColor+FF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FF.h"; sourceTree = "<group>"; };
@@ -136,6 +134,7 @@
 		CEAACFEE1BAB3E5900FC090B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE721BF31BB473A100B0460F /* MyCab-Prefix.pch */,
 				CEAACFEF1BAB3E5900FC090B /* Info.plist */,
 				CEAACFF01BAB3E5900FC090B /* main.m */,
 			);
@@ -196,8 +195,6 @@
 		CEAAD0201BAB40B900FC090B /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				CEAAD0211BAB40B900FC090B /* NSObject+FFLocalStorage.h */,
-				CEAAD0221BAB40B900FC090B /* NSObject+FFLocalStorage.m */,
 				CEAAD0231BAB40B900FC090B /* NSString+device.h */,
 				CEAAD0241BAB40B900FC090B /* NSString+device.m */,
 				CEAAD0251BAB40B900FC090B /* UIColor+FF.h */,
@@ -376,7 +373,6 @@
 				CEAAD05D1BAB40B900FC090B /* Reachability.m in Sources */,
 				CEAAD05E1BAB40B900FC090B /* SharedUtility.m in Sources */,
 				CEAACFF11BAB3E5900FC090B /* main.m in Sources */,
-				CEAAD04A1BAB40B900FC090B /* NSObject+FFLocalStorage.m in Sources */,
 				CEAAD04E1BAB40B900FC090B /* UIImage+Scale.m in Sources */,
 				CEAAD04D1BAB40B900FC090B /* UIFont+FF.m in Sources */,
 				CEAAD06B1BAB40D800FC090B /* UIViewController+RESideMenu.m in Sources */,
@@ -490,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyCab-Prefix.pch";
 				INFOPLIST_FILE = MyCab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyCab-Prefix.pch";
 				INFOPLIST_FILE = MyCab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,6 +523,7 @@
 				CEAAD0101BAB3E5900FC090B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

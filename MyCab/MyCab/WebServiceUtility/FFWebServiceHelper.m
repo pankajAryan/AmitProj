@@ -3,8 +3,7 @@
 
 
 #import "FFWebServiceHelper.h"
-#import "FFSession.h"
-#import "NSObject+FFLocalStorage.h"
+//#import "FFSession.h"
 #import "Reachability.h"
 
 
@@ -38,6 +37,8 @@
     return completeURL;
 }
 
+/* 
+ 
 + (NSMutableURLRequest*)appendCommonHeaderFieldsToRequest:(NSMutableURLRequest*)request {
     
     if ([FFSession sharedSession].sessionIdentifier) {
@@ -200,5 +201,7 @@
     UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] init];
     [indicatorView setAnimatingWithStateOfOperation:opration];
 }
+
+*/
 
 @end

@@ -25,7 +25,7 @@
     return sharedInstance;
 }
 
-
+/*
 -(void)startProgress:(UIColor *)color
 {
     [self stopProgress];
@@ -98,28 +98,30 @@
     }];
 }
 
+*/
 
 #pragma mark- Fetch Web View Data URL
 // Correct this method
 -(void) fetchWebViewDataFromURL:(NSString *)urlString fetched:(void(^)(eResponseType type, id object))fetchedBlock
 {
     [self startProgress:nil];
-    [self callWebServiceWithUrl:urlString withParameter:nil onCompletion:^(eResponseType responseType, id response) {
-        if (responseType == eResponseTypeSuccessJSON) {
-            [self updateSessionWithDictionary:response];
-            NSString *HtmlString = [[response objectForKey:@"metadata"] objectForKey:@"data"];
-            NSString *baseUrl = [[response objectForKey:@"metadata"] objectForKey:@"base_url"];
-            NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:HtmlString,@"html",baseUrl,@"baseUrl", nil];
-            
-            fetchedBlock(eResponseTypeSuccessJSON,dict);
-        }else{
-            fetchedBlock(responseType,response);
-        }
-        [self stopProgress];
-        
-    }];
+//    [self callWebServiceWithUrl:urlString withParameter:nil onCompletion:^(eResponseType responseType, id response) {
+//        if (responseType == eResponseTypeSuccessJSON) {
+//            [self updateSessionWithDictionary:response];
+//            NSString *HtmlString = [[response objectForKey:@"metadata"] objectForKey:@"data"];
+//            NSString *baseUrl = [[response objectForKey:@"metadata"] objectForKey:@"base_url"];
+//            NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:HtmlString,@"html",baseUrl,@"baseUrl", nil];
+//            
+//            fetchedBlock(eResponseTypeSuccessJSON,dict);
+//        }else{
+//            fetchedBlock(responseType,response);
+//        }
+//        [self stopProgress];
+//        
+//    }];
 }
 
+/*
 -(void) fetchCatalogFromURL:(NSString *)urlString fetched:(void(^)(eResponseType type, id data))fetchedBlock Progress:(BOOL)isProgress
 {
     
@@ -209,10 +211,11 @@
         
     }];
 }
-
+*/
 
 #pragma mark- Create Account
 
+/*
 -(void) createAccountWithParam:(NSMutableDictionary *)paramDic responseBlock:(void(^)(eResponseType type, id userProfile))responseBlock{
     
     [self startProgress:nil];
@@ -897,6 +900,6 @@
         [self stopProgress];
     }];
 }
-
+*/
 
 @end

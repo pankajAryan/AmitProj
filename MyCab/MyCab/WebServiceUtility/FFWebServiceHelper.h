@@ -3,11 +3,11 @@
 
 
 
-#import <AFNetworking/AFNetworking.h>
+//#import <AFNetworking/AFNetworking.h>
 
 @interface FFWebServiceHelper : NSObject
-@property(nonatomic,strong)AFHTTPRequestOperation *reqOperation;
--(void) callWebServiceWithUrl:(NSString *)serviceUrl withParameter:(NSMutableDictionary *)dictionary onCompletion:(void(^)(eResponseType responseType, id response))completionBlock;
+//@property(nonatomic,strong)AFHTTPRequestOperation *reqOperation;
+//-(void) callWebServiceWithUrl:(NSString *)serviceUrl withParameter:(NSMutableDictionary *)dictionary onCompletion:(void(^)(eResponseType responseType, id response))completionBlock;
 
 -(void) updateSessionWithDictionary:(NSDictionary*)dictionary;
 

@@ -18,6 +18,6 @@ static NSString * const kClientId = @"497795036266-m9dkr2rteplki4qp3a4s78vvrm05h
 
 #define FF_ITUNES_APP_ID    @"1013752796" // Place App ID here
 
-static const DDLogLevel ddLogLevel = DDLogLevelDebug;
+//static const DDLogLevel ddLogLevel = DDLogLevelDebug;
 
 #endif

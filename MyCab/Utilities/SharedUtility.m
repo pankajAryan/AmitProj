@@ -7,7 +7,7 @@
 //
 
 #import "SharedUtility.h"
-#import "FFSession.h"
+
 
 static SharedUtility *utility;
 
@@ -23,12 +23,12 @@ static SharedUtility *utility;
 + (eUserLoginType)loginType{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    if ([[FFSession sharedSession] is_loggedin]) {
-        return [defaults integerForKey:kKEY_loginType];
-    }
-    else {
+//    if ([[FFSession sharedSession] is_loggedin]) {
+//        return [defaults integerForKey:kKEY_loginType];
+//    }
+//    else {
         return eUserLoginTypeNotLogin;
-    }
+//    }
 }
 
 +(void)setLoginType:(eUserLoginType)type
@@ -37,7 +37,7 @@ static SharedUtility *utility;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"userLoginStatusDidChange" object:nil];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger:type forKey:kKEY_loginType];
+//    [defaults setInteger:type forKey:kKEY_loginType];
     [defaults synchronize];
 }
 

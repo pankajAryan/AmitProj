@@ -8,10 +8,7 @@
 
 #import "UIViewController+Utility.h"
 #import "FFConstant.h"
-#import "WishlistViewController.h"
-#import "NSObject+FFLocalStorage.h"
-#import "CartViewController.h"
-#import "FFSession.h"
+
 
 @implementation UIViewController (Utility)
 
@@ -25,7 +22,7 @@
 
 
 #pragma mark- Error And Alert Messages
-
+/*
 -(void) showErrorTSMessage:(NSString*)errorMessage{
     [TSMessage showNotificationWithTitle:errorMessage type:TSMessageNotificationTypeError];
 }
@@ -114,11 +111,12 @@
     }
 }
 
+
 -(void) showValidationError:(FFValidationResult*)validationError
 {
     [TSMessage showNotificationWithTitle:validationError.errorMessage type:TSMessageNotificationTypeError];
 }
-
+*/
 -(void) showAlert:(NSString *)message{
     
 //    [self showAlertWithTitle:message message:nil];
@@ -150,48 +148,6 @@
 
 
 #pragma mark - Update update whishList UI & TabBar Badge
-
-
-
-+(void)updateTabBarBadgeOnTabItemType:(kTabItemType)tabItemType{
-    
-    UITabBarController *tabBarCntrl = (UITabBarController*)App_Delegate.window.rootViewController;
-    
-    if (![tabBarCntrl isKindOfClass:[UITabBarController class]]) {
-     
-        return;
-    }
-    
-    switch (tabItemType) {
-        case kTabItemTypeWishList:
-        {
-            NSArray *wishListArray = (NSArray *)[self fetchLocally:kModalTypeWishList];
-            
-            if (wishListArray.count)
-                [[[tabBarCntrl viewControllers][1] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%ld",(unsigned long)wishListArray.count]];
-            else
-                [[[tabBarCntrl viewControllers][1] tabBarItem] setBadgeValue:nil];
-            
-        }
-            break;
-            
-        case kTabItemTypeCart:
-        {
-            NSInteger cartItemCount = (NSInteger)[FFSession sharedSession].cartCount;
-            
-            if (cartItemCount)
-                [[[tabBarCntrl viewControllers][2] tabBarItem] setBadgeValue:[NSString stringWithFormat:@"%ld",(unsigned long)cartItemCount]];
-            else
-                [[[tabBarCntrl viewControllers][2] tabBarItem] setBadgeValue:nil];
-
-        }
-            break;
-            
-        default:
-            break;
-    }
-    
-}
 
 - (void)setTabBarAnimatedlyHidden:(BOOL)setHidden {
     

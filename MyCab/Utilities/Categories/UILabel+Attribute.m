@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Bluerock eServices Pvt Ltd. All rights reserved.
 //
 
-#import "UILabel+Attribute.h"
+//#import "UILabel+Attribute.h"
 
 
 @implementation UILabel (Attribute)
 
--(void) applyAttribute:(NSDictionary *) attribute onText:(NSString *) applyOn {
+/*-(void) applyAttribute:(NSDictionary *) attribute onText:(NSString *) applyOn {
     
     NSString *completeText = self.text;
     NSMutableAttributedString *attributedString = [self.attributedText mutableCopy];
@@ -25,7 +25,7 @@
     [self setAttributedText:attributedString];
 }
 
-
+*/
 
 
 

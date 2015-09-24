@@ -54,7 +54,7 @@
     uname(&systemInfo);
     
     NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
-    DDLogDebug(@"iPhone Device%@",[self platformType:platform]);
+//    DDLogDebug(@"iPhone Device%@",[self platformType:platform]);
     return [self platformType:platform];
 }
 + (NSString *)platformType:(NSString *)platform

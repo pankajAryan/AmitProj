@@ -7,14 +7,14 @@
 //
 
 #import "FFWebServiceHelper.h"
-#import <MBProgressHUD/MBProgressHUD.h>
+//#import <MBProgressHUD/MBProgressHUD.h>
 
-#import "DataModels.h"
+//#import "DataModels.h"
 
 
 @interface FFModelManager : FFWebServiceHelper
 
-@property(nonatomic,strong)MBProgressHUD *HUD;
+//@property(nonatomic,strong)MBProgressHUD *HUD;
 
 #pragma mark- Singleton
 +(FFModelManager*)sharedManager;
@@ -23,6 +23,7 @@
 -(void)startProgress:(UIColor *)color;
 -(void)stopProgress;
 
+/*
 #pragma mark- Fetch JSON From URL
 -(void) fetchJSONFromURL:(NSString *)urlString fetched:(void(^)(eResponseType type, id object))fetchedBlock;
 
@@ -152,5 +153,6 @@
 
 #pragma mark- Idea-Book Module
 - (void)fetchIdeaBookDataFromURL:(NSString *)urlString progressIndicator:(BOOL)isProgress  fetchedResponse:(void(^)(eResponseType type, id data))fetchedBlock;
+*/
 
 @end

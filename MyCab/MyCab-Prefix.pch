@@ -1,0 +1,39 @@
+//
+//  MyCab-Prefix.pch
+//  MyCab
+//
+//  Created by Pankaj Yadav on 24/09/15.
+//  Copyright © 2015 MobiEkin Technologies. All rights reserved.
+//
+
+#ifndef MyCab_Prefix_pch
+#define MyCab_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+//#import <Foundation/Foundation.h>
+#endif
+
+#import "FFConstant.h"
+#import "FFConfiguration.h"
+
+#import "FFurls.h"
+#import "SharedUtility.h"
+#import "FFModelManager.h"
+
+// Categories
+#import "UIFont+FF.h"
+#import "NSString+device.h"
+#import "UIViewController+Utility.h"
+#import "UILabel+Attribute.h"
+#import "UIColor+FF.h"
+#import "UIView+FF.h"
+#import "UINavigationItem+FF.h"
+#import "UITextField+Validation.h"
+
+
+
+#endif /* MyCab_Prefix_pch */
